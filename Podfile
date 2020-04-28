@@ -6,5 +6,5 @@ target 'SocialDistancing' do
   use_frameworks!
 
   # Pods for SocialDistancing
-
+  pod 'Alamofire'
 end
