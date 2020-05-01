@@ -3,13 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B1D07E94F77D053D0B179B50 /* Pods_SocialDistancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */; };
+		B40CC400245C363B0077098E /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC3FF245C363B0077098E /* DashboardController.swift */; };
+		B40CC405245C36DB0077098E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC404245C36DB0077098E /* Person.swift */; };
+		B40CC407245C37780077098E /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40CC406245C37780077098E /* Dashboard.storyboard */; };
+		B40CC409245C419C0077098E /* PassData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC408245C419C0077098E /* PassData.swift */; };
+		B40CC40D245C4D2A0077098E /* MyPass.json in Resources */ = {isa = PBXBuildFile; fileRef = B40CC40C245C4D2A0077098E /* MyPass.json */; };
+		B40CC40F245C4EA50077098E /* PassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC40E245C4EA50077098E /* PassCell.swift */; };
 		B48FAD5A2456D34500747DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD592456D34500747DF5 /* AppDelegate.swift */; };
-		B48FAD5C2456D34500747DF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */; };
 		B48FAD5E2456D34500747DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5D2456D34500747DF5 /* ViewController.swift */; };
 		B48FAD612456D34500747DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD5F2456D34500747DF5 /* Main.storyboard */; };
 		B48FAD632456D34700747DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD622456D34700747DF5 /* Assets.xcassets */; };
@@ -19,9 +24,14 @@
 /* Begin PBXFileReference section */
 		01608C46F45BA68DEB98DFC3 /* Pods-SocialDistancing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDistancing.debug.xcconfig"; path = "Target Support Files/Pods-SocialDistancing/Pods-SocialDistancing.debug.xcconfig"; sourceTree = "<group>"; };
 		6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialDistancing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40CC3FF245C363B0077098E /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		B40CC404245C36DB0077098E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B40CC406245C37780077098E /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		B40CC408245C419C0077098E /* PassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassData.swift; sourceTree = "<group>"; };
+		B40CC40C245C4D2A0077098E /* MyPass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyPass.json; sourceTree = "<group>"; };
+		B40CC40E245C4EA50077098E /* PassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCell.swift; sourceTree = "<group>"; };
 		B48FAD562456D34500747DF5 /* SocialDistancing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialDistancing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48FAD592456D34500747DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B48FAD5D2456D34500747DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B48FAD602456D34500747DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B48FAD622456D34700747DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +60,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B40CC401245C364B0077098E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B40CC403245C36820077098E /* Model */,
+				B40CC402245C365E0077098E /* Dashboard */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B40CC402245C365E0077098E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B40CC3FF245C363B0077098E /* DashboardController.swift */,
+				B40CC406245C37780077098E /* Dashboard.storyboard */,
+				B40CC40E245C4EA50077098E /* PassCell.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B40CC403245C36820077098E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B40CC40C245C4D2A0077098E /* MyPass.json */,
+				B40CC404245C36DB0077098E /* Person.swift */,
+				B40CC408245C419C0077098E /* PassData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B48FAD4D2456D34500747DF5 = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +110,8 @@
 		B48FAD582456D34500747DF5 /* SocialDistancing */ = {
 			isa = PBXGroup;
 			children = (
+				B40CC401245C364B0077098E /* Module */,
 				B48FAD592456D34500747DF5 /* AppDelegate.swift */,
-				B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */,
 				B48FAD5D2456D34500747DF5 /* ViewController.swift */,
 				B48FAD5F2456D34500747DF5 /* Main.storyboard */,
 				B48FAD622456D34700747DF5 /* Assets.xcassets */,
@@ -88,7 +127,6 @@
 				01608C46F45BA68DEB98DFC3 /* Pods-SocialDistancing.debug.xcconfig */,
 				CD28FBBFBD34D2048856F551 /* Pods-SocialDistancing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,8 +191,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48FAD662456D34700747DF5 /* LaunchScreen.storyboard in Resources */,
+				B40CC40D245C4D2A0077098E /* MyPass.json in Resources */,
 				B48FAD632456D34700747DF5 /* Assets.xcassets in Resources */,
 				B48FAD612456D34500747DF5 /* Main.storyboard in Resources */,
+				B40CC407245C37780077098E /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B40CC405245C36DB0077098E /* Person.swift in Sources */,
+				B40CC409245C419C0077098E /* PassData.swift in Sources */,
+				B40CC40F245C4EA50077098E /* PassCell.swift in Sources */,
+				B40CC400245C363B0077098E /* DashboardController.swift in Sources */,
 				B48FAD5E2456D34500747DF5 /* ViewController.swift in Sources */,
 				B48FAD5A2456D34500747DF5 /* AppDelegate.swift in Sources */,
-				B48FAD5C2456D34500747DF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
