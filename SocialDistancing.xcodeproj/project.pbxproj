@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B1D07E94F77D053D0B179B50 /* Pods_SocialDistancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */; };
 		B48FAD5A2456D34500747DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD592456D34500747DF5 /* AppDelegate.swift */; };
 		B48FAD5C2456D34500747DF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */; };
-		B48FAD5E2456D34500747DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5D2456D34500747DF5 /* ViewController.swift */; };
+		B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5D2456D34500747DF5 /* LoginViewController.swift */; };
 		B48FAD612456D34500747DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD5F2456D34500747DF5 /* Main.storyboard */; };
 		B48FAD632456D34700747DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD622456D34700747DF5 /* Assets.xcassets */; };
 		B48FAD662456D34700747DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD642456D34700747DF5 /* LaunchScreen.storyboard */; };
+		DD62E077245DC04B003B25AB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62E076245DC04B003B25AB /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +23,13 @@
 		B48FAD562456D34500747DF5 /* SocialDistancing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialDistancing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48FAD592456D34500747DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B48FAD5D2456D34500747DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B48FAD5D2456D34500747DF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B48FAD602456D34500747DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B48FAD622456D34700747DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B48FAD652456D34700747DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B48FAD672456D34700747DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD28FBBFBD34D2048856F551 /* Pods-SocialDistancing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialDistancing.release.xcconfig"; path = "Target Support Files/Pods-SocialDistancing/Pods-SocialDistancing.release.xcconfig"; sourceTree = "<group>"; };
+		DD62E076245DC04B003B25AB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +75,12 @@
 			children = (
 				B48FAD592456D34500747DF5 /* AppDelegate.swift */,
 				B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */,
-				B48FAD5D2456D34500747DF5 /* ViewController.swift */,
+				B48FAD5D2456D34500747DF5 /* LoginViewController.swift */,
 				B48FAD5F2456D34500747DF5 /* Main.storyboard */,
 				B48FAD622456D34700747DF5 /* Assets.xcassets */,
 				B48FAD642456D34700747DF5 /* LaunchScreen.storyboard */,
 				B48FAD672456D34700747DF5 /* Info.plist */,
+				DD62E076245DC04B003B25AB /* UIViewControllerExtension.swift */,
 			);
 			path = SocialDistancing;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				01608C46F45BA68DEB98DFC3 /* Pods-SocialDistancing.debug.xcconfig */,
 				CD28FBBFBD34D2048856F551 /* Pods-SocialDistancing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,7 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B48FAD5E2456D34500747DF5 /* ViewController.swift in Sources */,
+				DD62E077245DC04B003B25AB /* UIViewControllerExtension.swift in Sources */,
+				B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */,
 				B48FAD5A2456D34500747DF5 /* AppDelegate.swift in Sources */,
 				B48FAD5C2456D34500747DF5 /* SceneDelegate.swift in Sources */,
 			);
@@ -357,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PP64RT7P8Z;
 				INFOPLIST_FILE = SocialDistancing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PP64RT7P8Z;
 				INFOPLIST_FILE = SocialDistancing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
