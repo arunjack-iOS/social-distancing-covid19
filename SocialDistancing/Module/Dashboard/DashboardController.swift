@@ -56,8 +56,8 @@ class DashboardController: UIViewController {
         
         if let path = Bundle.main.path(forResource: "MyPass", ofType: "json") {
               let url=URL(fileURLWithPath: path)
-            
-            Alamofire.request(url).response(completionHandler: { response in
+        
+            AF.request(url).response(completionHandler: { response in
 
                 guard let data = response.data else { return }
                 do {

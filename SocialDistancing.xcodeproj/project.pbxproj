@@ -15,7 +15,6 @@
 		B40CC40D245C4D2A0077098E /* MyPass.json in Resources */ = {isa = PBXBuildFile; fileRef = B40CC40C245C4D2A0077098E /* MyPass.json */; };
 		B40CC40F245C4EA50077098E /* PassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC40E245C4EA50077098E /* PassCell.swift */; };
 		B48FAD5A2456D34500747DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD592456D34500747DF5 /* AppDelegate.swift */; };
-		B48FAD5C2456D34500747DF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */; };
 		B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48FAD5D2456D34500747DF5 /* LoginViewController.swift */; };
 		B48FAD612456D34500747DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD5F2456D34500747DF5 /* Main.storyboard */; };
 		B48FAD632456D34700747DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B48FAD622456D34700747DF5 /* Assets.xcassets */; };
@@ -32,6 +31,7 @@
 		B40CC408245C419C0077098E /* PassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassData.swift; sourceTree = "<group>"; };
 		B40CC40C245C4D2A0077098E /* MyPass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyPass.json; sourceTree = "<group>"; };
 		B40CC40E245C4EA50077098E /* PassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCell.swift; sourceTree = "<group>"; };
+		B4106C68245EA10E0048344F /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Pods/Alamofire/Source/Alamofire.swift; sourceTree = "<group>"; };
 		B48FAD562456D34500747DF5 /* SocialDistancing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialDistancing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48FAD592456D34500747DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +96,7 @@
 		B48FAD4D2456D34500747DF5 = {
 			isa = PBXGroup;
 			children = (
+				B4106C68245EA10E0048344F /* Alamofire.swift */,
 				B48FAD582456D34500747DF5 /* SocialDistancing */,
 				B48FAD572456D34500747DF5 /* Products */,
 				E4FF2D47624CEF9B0EF5B339 /* Pods */,
@@ -257,7 +258,7 @@
 				B40CC409245C419C0077098E /* PassData.swift in Sources */,
 				B40CC40F245C4EA50077098E /* PassCell.swift in Sources */,
 				B40CC400245C363B0077098E /* DashboardController.swift in Sources */,
-				B48FAD5E2456D34500747DF5 /* ViewController.swift in Sources */,
+				B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */,
 				DD62E077245DC04B003B25AB /* UIViewControllerExtension.swift in Sources */,
 				B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */,
 				B48FAD5A2456D34500747DF5 /* AppDelegate.swift in Sources */,
