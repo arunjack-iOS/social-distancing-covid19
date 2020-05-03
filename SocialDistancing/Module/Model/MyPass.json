@@ -1,0 +1,34 @@
+{
+  "mypasses" : [
+    {
+      "id" : 101,
+      "status" : "Approved",
+      "purpose": "Medical Emergency",
+      "phone" : "9944629199",
+      "address" : "WhiteField",
+      "pincode": "560067",
+      "passnumber": "23432",
+      "slot": "Today 02 May 10 10AM to 11AM"
+    },
+    {
+      "id" : 102,
+      "status" : "Denied",
+      "purpose": "I am going to the grocery store",
+      "phone" : "9944629199",
+      "address" : "Whitefield",
+      "pincode": "560067",
+      "passnumber": "",
+      "slot": "Today 02 May 1PM to 2PM"
+    },
+    {
+      "id" : 103,
+      "status" : "Pending",
+      "purpose": "Buying Vegitables",
+      "phone" : "9944629199",
+      "address" : "Whitefield",
+      "pincode": "560067",
+      "passnumber": "",
+      "slot": "Today 02 May 2PM to 3PM"
+    }
+ ]
+}
