@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        Print("Test Git User")
+        saveCredentials()
         return true
     }
 
@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    func saveCredentials() {
+        UserDefaults.standard.setValue("testuser", forKey: "username")
+        UserDefaults.standard.setValue("1234", forKey: "otp")
+        
+    }
 }
 
