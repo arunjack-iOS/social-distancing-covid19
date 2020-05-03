@@ -22,8 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainNav
         window?.makeKeyAndVisible()
 
+        
+        saveCredentials()
         return true
     }
 
+    func saveCredentials() {
+        UserDefaults.standard.setValue("testuser", forKey: "username")
+        UserDefaults.standard.setValue("1234", forKey: "otp")
+        
+    }
 }
 
