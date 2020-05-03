@@ -20,14 +20,14 @@ class PassDetailNameCell: UITableViewCell {
         super.awakeFromNib()
         nameView.layer.cornerRadius = 10
         tickImage.layer.cornerRadius = 6
-        displayUIData()
+       // displayUIData()
     }
 
-    func displayUIData() {
-        nameLbl.text = "Mohan Babu Gundala"
-        phoneLbl.text = "8867327763"
-        cityLbl.text = "Manyata Tech Park"
-        passIdLbl.text = "987654"
+    func displayUIData(_ pass: PassEntity?) {
+        nameLbl.text = pass?.name
+        phoneLbl.text =  pass?.phone
+        cityLbl.text = pass?.address
+        passIdLbl.text = pass?.pincode
     }
 
 }

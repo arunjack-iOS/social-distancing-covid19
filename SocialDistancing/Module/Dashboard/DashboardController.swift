@@ -120,6 +120,9 @@ extension DashboardController : UITableViewDelegate, UITableViewDataSource {
         guard let dashNav = storyboard.instantiateViewController(withIdentifier: "PassDetialScreenIdentifier") as? PassDetialScreenVC else {
             fatalError("Invalid view controller type")
         }
+        
+        dashNav.passDataModel = myPass[indexPath.row]
+        
         self.navigationController?.pushViewController(dashNav, animated: true)
 
     }

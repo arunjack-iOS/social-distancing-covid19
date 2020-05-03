@@ -11,6 +11,7 @@ import UIKit
 
 struct PassEntity: Codable {
     var id: Int
+    var name: String
     var status: String
     var purpose: String
     var phone: String
@@ -20,7 +21,7 @@ struct PassEntity: Codable {
     var slot: String
 
     enum CodingKeys: String, CodingKey {
-        case id, status, purpose, phone, address, pincode, slot
+        case id, name, status, purpose, phone, address, pincode, slot
         case passNumber = "passnumber"
     }
 }

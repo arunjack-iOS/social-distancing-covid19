@@ -19,12 +19,12 @@ class PassDetailPurposeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         purposeView.layer.cornerRadius = 10
-        displayUIData()
+      //  displayUIData()
     }
 
-    func displayUIData() {
+    func displayUIData(_ pass: PassEntity?) {
         purposeLbl.text = "Purpose"
-        groceryLbl.text = "Fruits"
-        timeLbl.text = "Today 3 May 1 PM to 2 PM"
+        groceryLbl.text = pass?.purpose
+        timeLbl.text = pass?.slot
     }
 }
