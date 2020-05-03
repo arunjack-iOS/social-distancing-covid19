@@ -114,6 +114,16 @@ extension DashboardController : UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name:"PassDetialScreen",bundle: Bundle.main)
+
+        guard let dashNav = storyboard.instantiateViewController(withIdentifier: "PassDetialScreenIdentifier") as? PassDetialScreenVC else {
+            fatalError("Invalid view controller type")
+        }
+        self.navigationController?.pushViewController(dashNav, animated: true)
+
+    }
+    
 }
 
 
