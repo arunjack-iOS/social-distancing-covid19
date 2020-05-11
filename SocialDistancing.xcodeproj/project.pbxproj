@@ -11,6 +11,10 @@
 		1FEC11D8245EC80D00BE5923 /* PassDetialScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC11D4245EC80C00BE5923 /* PassDetialScreenVC.swift */; };
 		1FEC11D9245EC80D00BE5923 /* PassDetialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FEC11D5245EC80D00BE5923 /* PassDetialScreen.storyboard */; };
 		1FEC11DA245EC80D00BE5923 /* PassDetailNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC11D6245EC80D00BE5923 /* PassDetailNameCell.swift */; };
+		59B03447246985D9000A7DAC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B03446246985D9000A7DAC /* RegistrationViewController.swift */; };
+		59B03449246985E9000A7DAC /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B03448246985E9000A7DAC /* Registration.storyboard */; };
+		59B0346C246988EB000A7DAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0346B246988EA000A7DAC /* Constants.swift */; };
+		59B0346E246989F5000A7DAC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0346D246989F5000A7DAC /* Utility.swift */; };
 		B1D07E94F77D053D0B179B50 /* Pods_SocialDistancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */; };
 		B40CC400245C363B0077098E /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC3FF245C363B0077098E /* DashboardController.swift */; };
 		B40CC405245C36DB0077098E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC404245C36DB0077098E /* Person.swift */; };
@@ -32,6 +36,10 @@
 		1FEC11D4245EC80C00BE5923 /* PassDetialScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassDetialScreenVC.swift; sourceTree = "<group>"; };
 		1FEC11D5245EC80D00BE5923 /* PassDetialScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PassDetialScreen.storyboard; sourceTree = "<group>"; };
 		1FEC11D6245EC80D00BE5923 /* PassDetailNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassDetailNameCell.swift; sourceTree = "<group>"; };
+		59B03446246985D9000A7DAC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		59B03448246985E9000A7DAC /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		59B0346B246988EA000A7DAC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		59B0346D246989F5000A7DAC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialDistancing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40CC3FF245C363B0077098E /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		B40CC404245C36DB0077098E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -75,6 +83,24 @@
 			path = PassDetail;
 			sourceTree = "<group>";
 		};
+		59B0344524698572000A7DAC /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				59B03446246985D9000A7DAC /* RegistrationViewController.swift */,
+				59B03448246985E9000A7DAC /* Registration.storyboard */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		59B0346A246988B6000A7DAC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				59B0346B246988EA000A7DAC /* Constants.swift */,
+				59B0346D246989F5000A7DAC /* Utility.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		8965663B118A95BC795E458F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +112,7 @@
 		B40CC401245C364B0077098E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				59B0344524698572000A7DAC /* Registration */,
 				1FEC11D2245EC7D600BE5923 /* PassDetail */,
 				B40CC403245C36820077098E /* Model */,
 				B40CC402245C365E0077098E /* Dashboard */,
@@ -135,6 +162,7 @@
 		B48FAD582456D34500747DF5 /* SocialDistancing */ = {
 			isa = PBXGroup;
 			children = (
+				59B0346A246988B6000A7DAC /* Constants */,
 				B40CC401245C364B0077098E /* Module */,
 				B48FAD592456D34500747DF5 /* AppDelegate.swift */,
 				B48FAD5B2456D34500747DF5 /* SceneDelegate.swift */,
@@ -220,6 +248,7 @@
 				1FEC11D9245EC80D00BE5923 /* PassDetialScreen.storyboard in Resources */,
 				B48FAD662456D34700747DF5 /* LaunchScreen.storyboard in Resources */,
 				B40CC40D245C4D2A0077098E /* MyPass.json in Resources */,
+				59B03449246985E9000A7DAC /* Registration.storyboard in Resources */,
 				B48FAD632456D34700747DF5 /* Assets.xcassets in Resources */,
 				B48FAD612456D34500747DF5 /* Main.storyboard in Resources */,
 				B40CC407245C37780077098E /* Dashboard.storyboard in Resources */,
@@ -275,12 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B0346E246989F5000A7DAC /* Utility.swift in Sources */,
 				B40CC405245C36DB0077098E /* Person.swift in Sources */,
 				1FEC11DA245EC80D00BE5923 /* PassDetailNameCell.swift in Sources */,
 				B40CC409245C419C0077098E /* PassData.swift in Sources */,
 				1FEC11D8245EC80D00BE5923 /* PassDetialScreenVC.swift in Sources */,
 				B40CC40F245C4EA50077098E /* PassCell.swift in Sources */,
 				B40CC400245C363B0077098E /* DashboardController.swift in Sources */,
+				59B03447246985D9000A7DAC /* RegistrationViewController.swift in Sources */,
+				59B0346C246988EB000A7DAC /* Constants.swift in Sources */,
 				B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */,
 				DD62E077245DC04B003B25AB /* UIViewControllerExtension.swift in Sources */,
 				B48FAD5E2456D34500747DF5 /* LoginViewController.swift in Sources */,

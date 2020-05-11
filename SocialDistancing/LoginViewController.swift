@@ -27,25 +27,8 @@ class LoginViewController: UIViewController {
     }
     
     func textFieldUI() {
-                
-        let borderColor = UIColor(red: 0.03, green: 0.37, blue: 0.99, alpha: 1.0)
-        let phonePaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.phoneTextField.frame.height))
-        let otpPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.phoneTextField.frame.height))
-        
-        phoneTextField.layer.borderWidth = 1.0
-        phoneTextField.layer.borderColor = borderColor.cgColor
-        phoneTextField.layer.cornerRadius = 5.0
-        phoneTextField.leftView = phonePaddingView
-        phoneTextField.leftViewMode = UITextField.ViewMode.always
-        phoneTextField.delegate = self
-        
-        otpTextField.layer.borderWidth = 1.0
-        otpTextField.layer.borderColor = borderColor.cgColor
-        otpTextField.layer.cornerRadius = 5.0
-        otpTextField.leftView = otpPaddingView
-        otpTextField.leftViewMode = UITextField.ViewMode.always
-        otpTextField.delegate = self
-        
+        configureUI(for: phoneTextField)
+        configureUI(for: otpTextField)
     }
     
     func fetchCredentials() {
