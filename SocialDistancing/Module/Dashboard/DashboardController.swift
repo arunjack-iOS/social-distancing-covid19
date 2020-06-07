@@ -80,6 +80,10 @@ class DashboardController: UIViewController {
     }
     
     @IBAction func requestPassClicked(_ sender: Any) {
+         let storyboard = UIStoryboard(name:"RequestPass",bundle: Bundle.main)
+        if let requestPassVC = storyboard.instantiateViewController(withIdentifier: "RequestPassViewController") as? RequestPassViewController {
+            self.navigationController?.pushViewController(requestPassVC, animated: true)
+        }
     }
     
     /*
