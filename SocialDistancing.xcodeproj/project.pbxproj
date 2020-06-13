@@ -15,6 +15,8 @@
 		59B03449246985E9000A7DAC /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B03448246985E9000A7DAC /* Registration.storyboard */; };
 		59B0346C246988EB000A7DAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0346B246988EA000A7DAC /* Constants.swift */; };
 		59B0346E246989F5000A7DAC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B0346D246989F5000A7DAC /* Utility.swift */; };
+		6953D0522494D78E0088CC7A /* RequestPass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6953D0502494D78E0088CC7A /* RequestPass.storyboard */; };
+		6953D0532494D78E0088CC7A /* RequestPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6953D0512494D78E0088CC7A /* RequestPassViewController.swift */; };
 		B1D07E94F77D053D0B179B50 /* Pods_SocialDistancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */; };
 		B40CC400245C363B0077098E /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC3FF245C363B0077098E /* DashboardController.swift */; };
 		B40CC405245C36DB0077098E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CC404245C36DB0077098E /* Person.swift */; };
@@ -40,6 +42,8 @@
 		59B03448246985E9000A7DAC /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		59B0346B246988EA000A7DAC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		59B0346D246989F5000A7DAC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		6953D0502494D78E0088CC7A /* RequestPass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RequestPass.storyboard; sourceTree = "<group>"; };
+		6953D0512494D78E0088CC7A /* RequestPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPassViewController.swift; sourceTree = "<group>"; };
 		6DD10D325BD4765430AA98EB /* Pods_SocialDistancing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialDistancing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40CC3FF245C363B0077098E /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		B40CC404245C36DB0077098E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		6953D04B2494D6D40088CC7A /* RequestPass */ = {
+			isa = PBXGroup;
+			children = (
+				6953D0502494D78E0088CC7A /* RequestPass.storyboard */,
+				6953D0512494D78E0088CC7A /* RequestPassViewController.swift */,
+			);
+			path = RequestPass;
+			sourceTree = "<group>";
+		};
 		8965663B118A95BC795E458F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		B40CC401245C364B0077098E /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				6953D04B2494D6D40088CC7A /* RequestPass */,
 				59B0344524698572000A7DAC /* Registration */,
 				1FEC11D2245EC7D600BE5923 /* PassDetail */,
 				B40CC403245C36820077098E /* Model */,
@@ -250,6 +264,7 @@
 				B40CC40D245C4D2A0077098E /* MyPass.json in Resources */,
 				59B03449246985E9000A7DAC /* Registration.storyboard in Resources */,
 				B48FAD632456D34700747DF5 /* Assets.xcassets in Resources */,
+				6953D0522494D78E0088CC7A /* RequestPass.storyboard in Resources */,
 				B48FAD612456D34500747DF5 /* Main.storyboard in Resources */,
 				B40CC407245C37780077098E /* Dashboard.storyboard in Resources */,
 			);
@@ -310,6 +325,7 @@
 				B40CC409245C419C0077098E /* PassData.swift in Sources */,
 				1FEC11D8245EC80D00BE5923 /* PassDetialScreenVC.swift in Sources */,
 				B40CC40F245C4EA50077098E /* PassCell.swift in Sources */,
+				6953D0532494D78E0088CC7A /* RequestPassViewController.swift in Sources */,
 				B40CC400245C363B0077098E /* DashboardController.swift in Sources */,
 				59B03447246985D9000A7DAC /* RegistrationViewController.swift in Sources */,
 				59B0346C246988EB000A7DAC /* Constants.swift in Sources */,
