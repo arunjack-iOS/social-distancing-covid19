@@ -22,15 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainNav
         window?.makeKeyAndVisible()
 
-        
+        configureNavBarAppearance()
         saveCredentials()
         return true
+    }
+    
+    fileprivate func configureNavBarAppearance() {
+        UINavigationBar.appearance().barTintColor = ColorConstants.color4981DB
+        UINavigationBar.appearance().tintColor = ColorConstants.colorFFFFFF
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorConstants.colorFFFFFF, NSAttributedString.Key.font: FontConstants.navBarTitle]
     }
 
     func saveCredentials() {
         UserDefaults.standard.setValue("testuser", forKey: "username")
         UserDefaults.standard.setValue("1234", forKey: "otp")
-        
     }
 }
 
