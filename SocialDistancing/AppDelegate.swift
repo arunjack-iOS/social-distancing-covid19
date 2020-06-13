@@ -17,13 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let mainNav = DashboardWireFrame.assembleDashboard()
+        let mainNav = LoginWireFrame.assembleDashboard()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = mainNav
         window?.makeKeyAndVisible()
 
         configureNavBarAppearance()
-        saveCredentials()
         return true
     }
     
@@ -33,9 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: ColorConstants.colorFFFFFF, NSAttributedString.Key.font: FontConstants.navBarTitle]
     }
 
-    func saveCredentials() {
-        UserDefaults.standard.setValue("testuser", forKey: "username")
-        UserDefaults.standard.setValue("1234", forKey: "otp")
-    }
+   
 }
 

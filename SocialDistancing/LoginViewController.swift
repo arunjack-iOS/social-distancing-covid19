@@ -26,6 +26,11 @@ class LoginViewController: UIViewController {
         fetchCredentials()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "islogin") {
+            pushToDashboard()
+        }
+    }
     func textFieldUI() {
         configureUI(for: phoneTextField)
         configureUI(for: otpTextField)
@@ -40,13 +45,29 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtnClicked(_ sender: Any) {
         
         if phoneTextField.text == "testuser" && otpTextField.text == "1234" {
-            showAlert(title: "", message: "Login Success")
+          //  showAlert(title: "", message: "Login Success")
+            saveCredentials()
+            pushToDashboard()
         } else {
+            UserDefaults.standard.set(false, forKey: "islogin")
+
             showAlert(title: "Error", message: "Please enter Valid credentials")
         }
     }
     
+    func saveCredentials() {
+        UserDefaults.standard.set(true, forKey: "islogin")
+           UserDefaults.standard.setValue("testuser", forKey: "username")
+           UserDefaults.standard.setValue("1234", forKey: "otp")
+       }
+    
+    func pushToDashboard() {
+        let dashNav = DashboardWireFrame.assembleDashboard()
+        self.navigationController?.pushViewController(dashNav.viewControllers[0], animated: false)
+    }
     @IBAction func createAccountBtnClicked(_ sender: Any) {
+       let regVC = RegWireFrame.assembleReg()
+       self.navigationController?.pushViewController(regVC, animated: false)
     }
     
 }
@@ -59,4 +80,16 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+class LoginWireFrame {
+    
+    class func assembleDashboard() -> UINavigationController {
+        let storyboard = UIStoryboard(name:"Main",bundle: Bundle.main)
+
+        guard let dashNav = storyboard.instantiateViewController(withIdentifier: "LoginNav") as? UINavigationController else {
+            fatalError("Invalid view controller type")
+        }
+        return dashNav
+    }
 }

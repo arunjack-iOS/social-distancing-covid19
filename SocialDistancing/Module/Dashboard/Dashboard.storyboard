@@ -170,7 +170,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WJa-3u-Pqw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Passes" id="94G-zk-fYH"/>
+                    <navigationItem key="navigationItem" title="My Passes" id="94G-zk-fYH">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="ChK-0c-G5b">
+                            <connections>
+                                <action selector="logoutClicked:" destination="T72-NQ-HVG" id="LtL-ZB-Ubk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dashboardTable" destination="NhF-57-uDi" id="kG5-28-NuN"/>
                         <outlet property="msgLbl" destination="4ol-uU-QIu" id="f0h-cR-NZs"/>
