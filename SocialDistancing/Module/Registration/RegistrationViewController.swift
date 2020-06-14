@@ -34,6 +34,22 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func submitButtonClicked(_ sender: Any) {
         view.endEditing(true)
-        self.navigationController?.show(DashboardWireFrame.assembleDashboard(), sender: nil)
+        UserDefaults.standard.set(true, forKey: "islogin")
+        
+        let dashNav = DashboardWireFrame.assembleDashboard()
+        self.navigationController?.pushViewController(dashNav.viewControllers[0], animated: true)
+        
+    }
+}
+
+class RegWireFrame {
+    
+    class func assembleReg() -> UIViewController {
+        let storyboard = UIStoryboard(name:"Registration",bundle: Bundle.main)
+
+        guard let dashNav = storyboard.instantiateViewController(withIdentifier: "RegistrationVC") as? RegistrationViewController else {
+            fatalError("Invalid view controller type")
+        }
+        return dashNav
     }
 }
