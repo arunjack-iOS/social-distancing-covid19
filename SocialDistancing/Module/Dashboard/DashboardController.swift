@@ -21,7 +21,7 @@ class DashboardController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.navigationItem.hidesBackButton = true
         setUpTable()
         invokeMyPassAPI()
         messageLbl()
@@ -77,6 +77,10 @@ class DashboardController: UIViewController {
         }
         
 
+    }
+    @IBAction func logoutClicked(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "islogin")
+        self.navigationController?.popToRootViewController(animated: false)
     }
     
     @IBAction func requestPassClicked(_ sender: Any) {

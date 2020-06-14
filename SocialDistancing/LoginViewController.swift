@@ -26,26 +26,14 @@ class LoginViewController: UIViewController {
         fetchCredentials()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "islogin") {
+            pushToDashboard()
+        }
+    }
     func textFieldUI() {
-                
-        let borderColor = UIColor(red: 0.03, green: 0.37, blue: 0.99, alpha: 1.0)
-        let phonePaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.phoneTextField.frame.height))
-        let otpPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.phoneTextField.frame.height))
-        
-        phoneTextField.layer.borderWidth = 1.0
-        phoneTextField.layer.borderColor = borderColor.cgColor
-        phoneTextField.layer.cornerRadius = 5.0
-        phoneTextField.leftView = phonePaddingView
-        phoneTextField.leftViewMode = UITextField.ViewMode.always
-        phoneTextField.delegate = self
-        
-        otpTextField.layer.borderWidth = 1.0
-        otpTextField.layer.borderColor = borderColor.cgColor
-        otpTextField.layer.cornerRadius = 5.0
-        otpTextField.leftView = otpPaddingView
-        otpTextField.leftViewMode = UITextField.ViewMode.always
-        otpTextField.delegate = self
-        
+        configureUI(for: phoneTextField)
+        configureUI(for: otpTextField)
     }
     
     func fetchCredentials() {
@@ -57,13 +45,29 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtnClicked(_ sender: Any) {
         
         if phoneTextField.text == "testuser" && otpTextField.text == "1234" {
-            showAlert(title: "", message: "Login Success")
+          //  showAlert(title: "", message: "Login Success")
+            saveCredentials()
+            pushToDashboard()
         } else {
+            UserDefaults.standard.set(false, forKey: "islogin")
+
             showAlert(title: "Error", message: "Please enter Valid credentials")
         }
     }
     
+    func saveCredentials() {
+        UserDefaults.standard.set(true, forKey: "islogin")
+           UserDefaults.standard.setValue("testuser", forKey: "username")
+           UserDefaults.standard.setValue("1234", forKey: "otp")
+       }
+    
+    func pushToDashboard() {
+        let dashNav = DashboardWireFrame.assembleDashboard()
+        self.navigationController?.pushViewController(dashNav.viewControllers[0], animated: false)
+    }
     @IBAction func createAccountBtnClicked(_ sender: Any) {
+       let regVC = RegWireFrame.assembleReg()
+       self.navigationController?.pushViewController(regVC, animated: false)
     }
     
 }
@@ -76,4 +80,16 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+class LoginWireFrame {
+    
+    class func assembleDashboard() -> UINavigationController {
+        let storyboard = UIStoryboard(name:"Main",bundle: Bundle.main)
+
+        guard let dashNav = storyboard.instantiateViewController(withIdentifier: "LoginNav") as? UINavigationController else {
+            fatalError("Invalid view controller type")
+        }
+        return dashNav
+    }
 }
