@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Purpose" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLm-oS-rFR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Purpose" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLm-oS-rFR">
                                 <rect key="frame" x="62" y="123" width="275" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="s1e-Y4-O1M"/>
@@ -23,13 +23,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Time Slot" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EY-YS-cdv">
-                                <rect key="frame" x="62" y="220" width="275" height="44"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Time Slot 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EY-YS-cdv">
+                                <rect key="frame" x="62" y="220" width="109" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PwI-2i-qVA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kLQ-da-pHf" id="Ydg-d4-H8C"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3A-Bg-Kat">
                                 <rect key="frame" x="145" y="323" width="116" height="40"/>
@@ -52,18 +55,32 @@
                                     <outlet property="delegate" destination="kLQ-da-pHf" id="gSj-KV-t2I"/>
                                 </connections>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Time Slot 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-rM-kMg">
+                                <rect key="frame" x="202" y="220" width="135" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hgH-74-H8v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kLQ-da-pHf" id="JbY-HS-Jie"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="UUE-rM-kMg" firstAttribute="leading" secondItem="4EY-YS-cdv" secondAttribute="trailing" constant="31" id="6aC-RW-ESW"/>
+                            <constraint firstItem="UUE-rM-kMg" firstAttribute="trailing" secondItem="jLm-oS-rFR" secondAttribute="trailing" id="752-CU-5pj"/>
                             <constraint firstItem="Xug-W2-lHt" firstAttribute="trailing" secondItem="b3A-Bg-Kat" secondAttribute="trailing" constant="153" id="8DS-rh-OQM"/>
                             <constraint firstItem="uNJ-5W-zJi" firstAttribute="bottom" secondItem="Xug-W2-lHt" secondAttribute="bottom" id="A94-FH-gAE"/>
                             <constraint firstItem="b3A-Bg-Kat" firstAttribute="centerX" secondItem="uNJ-5W-zJi" secondAttribute="centerX" id="CfH-6N-tk4"/>
                             <constraint firstItem="b3A-Bg-Kat" firstAttribute="top" secondItem="4EY-YS-cdv" secondAttribute="bottom" constant="59" id="M8i-4c-GaX"/>
                             <constraint firstItem="b3A-Bg-Kat" firstAttribute="leading" secondItem="Xug-W2-lHt" secondAttribute="leading" constant="145" id="PXW-18-yST"/>
+                            <constraint firstItem="UUE-rM-kMg" firstAttribute="baseline" secondItem="4EY-YS-cdv" secondAttribute="baseline" id="VnA-Kn-jdn"/>
                             <constraint firstItem="jLm-oS-rFR" firstAttribute="leading" secondItem="Xug-W2-lHt" secondAttribute="leading" constant="62" id="X6I-tu-1tk"/>
                             <constraint firstItem="4EY-YS-cdv" firstAttribute="top" secondItem="jLm-oS-rFR" secondAttribute="bottom" constant="53" id="Xit-Qc-WNO"/>
                             <constraint firstItem="jLm-oS-rFR" firstAttribute="top" secondItem="Xug-W2-lHt" secondAttribute="top" constant="79" id="a3q-sc-LNP"/>
-                            <constraint firstItem="jLm-oS-rFR" firstAttribute="trailing" secondItem="4EY-YS-cdv" secondAttribute="trailing" id="ddk-m0-lJ1"/>
+                            <constraint firstItem="jLm-oS-rFR" firstAttribute="trailing" secondItem="4EY-YS-cdv" secondAttribute="trailing" constant="166" id="ddk-m0-lJ1"/>
                             <constraint firstItem="Xug-W2-lHt" firstAttribute="trailing" secondItem="jLm-oS-rFR" secondAttribute="trailing" constant="77" id="q3h-Bh-GgZ"/>
                             <constraint firstItem="Xug-W2-lHt" firstAttribute="trailing" secondItem="uNJ-5W-zJi" secondAttribute="trailing" constant="4" id="vuL-jP-KkF"/>
                             <constraint firstItem="jLm-oS-rFR" firstAttribute="leading" secondItem="4EY-YS-cdv" secondAttribute="leading" id="wuv-Ov-2wL"/>
@@ -71,9 +88,10 @@
                         <viewLayoutGuide key="safeArea" id="Xug-W2-lHt"/>
                     </view>
                     <connections>
-                        <outlet property="purposePicker" destination="uNJ-5W-zJi" id="zGC-Cp-EnH"/>
                         <outlet property="purposeTextField" destination="jLm-oS-rFR" id="vPw-FT-0LJ"/>
-                        <outlet property="timeTextField" destination="4EY-YS-cdv" id="iAU-fE-HGU"/>
+                        <outlet property="timeSlotPicker" destination="uNJ-5W-zJi" id="eAv-cm-63M"/>
+                        <outlet property="timeTextField1" destination="4EY-YS-cdv" id="9cb-AO-g3O"/>
+                        <outlet property="timeTextField2" destination="UUE-rM-kMg" id="lqL-Cb-Gzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70x-L1-gDx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
