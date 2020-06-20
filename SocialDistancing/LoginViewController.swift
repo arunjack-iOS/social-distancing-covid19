@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         } else {
             UserDefaults.standard.set(false, forKey: "islogin")
 
-            showAlert(title: "Error", message: "Please enter Valid credentials")
+            showAlert(title: "Error", message: "Please enter Valid credentials", handlerAction: {(action) in })
         }
     }
     
