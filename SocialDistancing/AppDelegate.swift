@@ -12,16 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var mainNav: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        let mainNav = LoginWireFrame.assembleDashboard()
+        if UserDefaults.standard.bool(forKey: "isLogin") {
+            mainNav = DashboardWireFrame.assembleDashboard()
+        } else {
+            mainNav = LoginWireFrame.assembleLogin()
+        }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = mainNav
         window?.makeKeyAndVisible()
-
         configureNavBarAppearance()
         return true
     }

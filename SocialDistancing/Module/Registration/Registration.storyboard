@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Qtk-g9-8HT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" textContentType="tel"/>
                                 <connections>
                                     <outlet property="delegate" destination="RRY-Ma-JjK" id="JTh-HN-grR"/>
                                 </connections>
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="40" id="3TG-oV-IfS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="street-address"/>
                                 <connections>
                                     <outlet property="delegate" destination="RRY-Ma-JjK" id="byu-NF-JCG"/>
                                 </connections>
@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="40" id="eis-RL-lc0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="postal-code"/>
                                 <connections>
                                     <outlet property="delegate" destination="RRY-Ma-JjK" id="Rxl-wH-CaU"/>
                                 </connections>
@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="40" id="pFB-YZ-lHy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <outlet property="delegate" destination="RRY-Ma-JjK" id="Bpo-bv-RPr"/>
                                 </connections>

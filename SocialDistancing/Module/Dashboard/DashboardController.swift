@@ -80,7 +80,9 @@ class DashboardController: UIViewController {
     }
     @IBAction func logoutClicked(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "islogin")
-        self.navigationController?.popToRootViewController(animated: false)
+        let loginVc = LoginWireFrame.assembleLogin()
+        loginVc.modalPresentationStyle = .fullScreen
+        self.present(loginVc, animated: true, completion: nil)
     }
     
     @IBAction func requestPassClicked(_ sender: Any) {
